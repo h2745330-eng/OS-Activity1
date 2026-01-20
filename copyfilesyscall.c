@@ -11,14 +11,14 @@ int main() {
     char buffer[BUFFER_SIZE];
 
     // Open the source file for reading
-    src_fd = open("class_activity1/result.txt", O_RDONLY);
+    src_fd = open("result.txt", O_RDONLY);
     if (src_fd < 0) {
         perror("Failed to open source file");
         exit(EXIT_FAILURE);
     }
 
     // Open the destination file for writing (create if it doesn't exist)
-    dest_fd = open("class_activity1/copyresult.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    dest_fd = open("copyresult.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
     if (dest_fd < 0) {
         perror("Failed to open destination file");
         close(src_fd);
